@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>☁ Cloud Computing</h1>
+        <p>Simple Cloud Storage Dashboard</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('files')">My Files</button>
+        <button onclick="showSection('about')">About</button>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="section active">
+            <h2>Cloud Dashboard</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Storage</h3>
+                    <p id="storage">0 MB / 1000 MB</p>
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Total Files</h3>
+                    <p id="fileCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Cloud Status</h3>
+                    <p class="online">● Online</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="files" class="section">
+            <h2>My Files</h2>
+
+            <input type="file" id="fileInput" multiple>
+            <button class="upload-btn" onclick="uploadFiles()">Upload Files</button>
+
+            <div id="fileList"></div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About This Application</h2>
+            <p>
+                This is a simple cloud computing interface created using
+                HTML, CSS and JavaScript.
+            </p>
+            <p>
+                It demonstrates file selection, storage calculation,
+                navigation and a cloud-style dashboard.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cloud Computing Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
